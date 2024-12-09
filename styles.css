@@ -8,33 +8,27 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #ff9a9e, #fecfef);
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px; /* Tambahan padding untuk ruang di layar kecil */
 }
 
 .container {
     text-align: center;
-    width: 100%;
-    max-width: 500px; /* Batas maksimum lebar kontainer */
 }
 
 /* Kotak Interaktif */
 .kotak {
     background: #ff6b6b;
     color: white;
-    font-size: 5vw; /* Gunakan vw untuk ukuran font agar responsif */
+    font-size: 32px;
     font-weight: bold;
-    width: 90%; /* Gunakan persentase untuk lebar */
-    max-width: 300px;
-    height: auto;
-    aspect-ratio: 2; /* Menjaga proporsi kotak */
-    line-height: normal; /* Sesuaikan line-height untuk konten dinamis */
+    width: 300px;
+    height: 150px;
+    line-height: 150px;
     border-radius: 15px;
     text-align: center;
-    padding: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -45,15 +39,14 @@ body {
 
 /* Bagian Pernyataan */
 .pernyataan {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
     animation: fadeIn 1s ease-in-out;
 }
 
 .pernyataan img {
-    width: 100%; /* Pastikan gambar memenuhi lebar kontainer */
-    max-width: 300px; /* Batas maksimum ukuran gambar */
-    height: auto; /* Jaga proporsi gambar */
+    width: 600px;
+    height: 600px;
     border-radius: 15px;
     margin-bottom: 20px;
     object-fit: cover;
@@ -62,7 +55,7 @@ body {
 }
 
 .pernyataan p {
-    font-size: 5vw; /* Gunakan vw untuk ukuran font */
+    font-size: 36px;
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
@@ -72,21 +65,20 @@ body {
 button {
     background: #ff6b6b;
     color: white;
-    font-size: 4vw; /* Responsif untuk ukuran font */
-    padding: 10px 20px; /* Kurangi padding agar lebih cocok di layar kecil */
+    font-size: 24px;  /* Ukuran font lebih besar */
+    padding: 40px 60px;  /* Padding lebih besar */
     border: none;
     border-radius: 10px;
     cursor: pointer;
     margin-top: 20px;
     animation: bounce 1.5s infinite;
     transition: all 0.3s ease;
-    width: 90%;
-    max-width: 300px; /* Batas maksimum lebar tombol */
 }
 
 button:hover {
     background: #ff4757;
 }
+
 
 /* Efek Animasi */
 .goyang {
@@ -129,19 +121,5 @@ button:hover {
     100% {
         top: 100vh;
         opacity: 0;
-    }
-}
-
-/* Media Query untuk layar kecil */
-@media (max-width: 600px) {
-    .kotak {
-        font-size: 6vw;
-    }
-    .pernyataan p {
-        font-size: 6vw;
-    }
-    button {
-        font-size: 5vw;
-        padding: 8px 16px;
     }
 }
